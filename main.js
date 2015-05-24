@@ -1,19 +1,13 @@
-var exec = require('child_process').exec,
+var utils = require('./lib/utilities'),
     express = require('express'),
     app = express();
-
-function execute(command, callback){
-    exec(command, function(error, stdout, stderr){
-        callback(stdout);
-    });
-}
 
 app.get('/:channel/:status', function (req, res) {
 
     var channel = req.params.channel,
         status = req.params.status;
 
-    execute('echo "pl ' + channel + ' ' + status + '" | nc localhost 1099', function() {
+    utils.execute('echo "pl ' + channel + ' ' + status + '" | nc localhost 1099', function() {
         console.log('completed');
     });
 
