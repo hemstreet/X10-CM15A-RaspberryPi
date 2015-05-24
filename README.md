@@ -14,3 +14,10 @@ $ ./configure
 $ make
 $ sudo make install
 ```
+
+Run `node main.js`, navigate to the url `http://localhost:3000/{{channel}}/{{status}}`,
+e.x. `http://localhost:3000/a1/on`
+
+Possible combinations are:
+* Channel = ( A - P )( 1 - 16 )
+* Status = ( on, off )

@@ -3,8 +3,10 @@ var exec = require('child_process').exec,
     app = express();
 
 function execute(command, callback){
-    exec(command, function(error, stdout, stderr){ callback(stdout); });
-};
+    exec(command, function(error, stdout, stderr){
+        callback(stdout);
+    });
+}
 
 app.get('/:channel/:status', function (req, res) {
 
@@ -15,7 +17,7 @@ app.get('/:channel/:status', function (req, res) {
         console.log('completed');
     });
 
-    res.send('\nScrape Complete, Check Console!\n\n')
+    res.send('\nSwitched ' + channel + ' to ' + status + '\n\n')
 });
 
 var server = app.listen(3000, function () {
