@@ -8,7 +8,10 @@ function execute(command, callback){
 
 app.get('/:channel/:status', function (req, res) {
 
-    execute('echo "pl a1 off" | nc localhost 1099', function() {
+    var channel = req.params.channel,
+        status = req.params.status;
+
+    execute('echo "pl ' + channel + ' ' + status + '" | nc localhost 1099', function() {
         console.log('completed');
     });
 
