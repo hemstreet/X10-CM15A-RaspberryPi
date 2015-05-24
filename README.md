@@ -13,6 +13,7 @@ $ cd mochad-
 $ ./configure
 $ make
 $ sudo make install
+$ npm install
 ```
 
 Run `node main.js`, navigate to the url `http://localhost:3000/{{channel}}/{{status}}`,
