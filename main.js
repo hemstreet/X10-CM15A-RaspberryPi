@@ -18,9 +18,7 @@ app.get('/party/:status', function (req, res) {
     var status = req.params.status;
 
     _.each(outlets, function(channel) {
-        utils.execute('echo "pl ' + channel + ' ' + status + '" | nc localhost 1099', function () {
-            console.log('completed');
-        });
+        utils.toggle(channel,status);
     });
 
     res.send('\nParty Mode!\n\n')
@@ -32,9 +30,7 @@ app.get('/:channel/:status', function (req, res) {
     var channel = req.params.channel,
         status = req.params.status;
 
-    utils.execute('echo "pl ' + channel + ' ' + status + '" | nc localhost 1099', function () {
-        console.log('completed');
-    });
+    utils.toggle(channel,status);
 
     res.send('\nSwitched ' + channel + ' to ' + status + '\n\n')
 });
