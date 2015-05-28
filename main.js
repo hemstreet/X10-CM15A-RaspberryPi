@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
 
 });
 
-app.get('/party', function (req, res) {
+app.get('/party/:status', function (req, res) {
 
     var outlets = {
         'ropeLight': 'a1',
@@ -22,6 +22,8 @@ app.get('/party', function (req, res) {
             console.log('completed');
         });
     });
+
+    res.send('\nParty Mode!\n\n')
 
 });
 
