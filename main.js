@@ -21,7 +21,7 @@ app.get('/party/:status', function (req, res) {
         utils.toggle(channel,status);
     });
 
-    res.send('\nParty Mode!\n\n')
+    res.send('\nParty Mode ' + status + '!\n\n')
 
 });
 

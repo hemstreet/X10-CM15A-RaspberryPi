@@ -9,10 +9,11 @@ $ sudo apt-get upgrade
 $ sudo apt-get install libusb-1.0-0-dev
 $ wget -O mochad.tgz http://sourceforge.net/projects/mochad/files/latest/download
 $ tar xf mochad.tgz
-$ cd mochad-
+$ cd mochad-* // This will be whatever version you have
 $ ./configure
 $ make
 $ sudo make install
+$ cd ..
 $ npm install
 ```
 
