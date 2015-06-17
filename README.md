@@ -13,6 +13,7 @@ $ cd mochad-* // This will be whatever version you have
 $ ./configure
 $ make
 $ sudo make install
+$ npm install
 $ cd ..
 $ npm install
 ```
